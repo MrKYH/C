@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int rowNum,rowNum1,nextSpaceNum=0,spaceNum;
+    printf("Enter number for row:");
+    scanf("%d",&rowNum);
+    rowNum1 = rowNum;
+    for(rowNum;0<rowNum;rowNum--){
+    //print space
+    for(spaceNum=1;spaceNum<rowNum;spaceNum++)
+        printf(" ");
+    printf("*");
+    for(spaceNum=0;spaceNum<nextSpaceNum;spaceNum++)
+        printf(" ");
+    nextSpaceNum += 2;
+    printf("*");
+    printf("\n");
+    }
+    rowNum = rowNum1;
+    nextSpaceNum=0;
+    for(rowNum;0<rowNum;rowNum--){
+    //print space
+    for(spaceNum=0;spaceNum<nextSpaceNum;spaceNum++)
+        printf(" ");
+    nextSpaceNum++;
+    printf("*");
+    for(spaceNum=2;spaceNum<rowNum*2;spaceNum++)
+        printf(" ");
+    printf("*");
+    printf("\n");
+    }
+    getch();
+    return 0;
+}
